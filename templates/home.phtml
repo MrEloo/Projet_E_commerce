@@ -1,0 +1,20 @@
+<?php
+if (isset($_SESSION['email'])) {
+    echo '<h1>Bonjour ' . $_SESSION['email'] . ', Comment allez-vous aujourd\'hui?</h1>';
+    echo '<h2>On commence ?</h2>';
+}
+
+?>
+
+<?php foreach ($data['categories'] as $key => $category) { ?>
+    <h1><?= $category->getName() ?></h1>
+    <?php foreach ($category->getProducts() as $key => $value) { ?>
+        <h2><?= $value->getName() ?></h2>
+        <img src="<?= $value->getImageUrl() ?>" alt="<?= $value->getImageAlt() ?>">
+        <p><?= $value->getPrice() ?>$</p>
+        <a href="index.php?route=addOrder&product_id=<?= $value->getId() ?>">Add To my List</a>
+    <?php } ?>
+<?php } ?>
+
+
+<a href="index.php?route=products">Show All My Products</a>

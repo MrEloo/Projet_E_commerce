@@ -1,0 +1,8 @@
+<?php foreach ($data['products'] as $key => $product) { ?>
+    <h1><?= $product->getName() ?></h1>
+    <h2><?= $product->getDescription() ?></h2>
+    <img src="<?= $product->getImageUrl() ?>" alt="<?= $product->getImageAlt() ?>">
+    <p><?= $product->getPrice() ?>$</p>
+    <a href="index.php?route=product&product_id=<?= $product->getId() ?>">Show Product</a>
+    <a href="index.php?route=addOrder&product_id=<?= $value->getId() ?>">Add To my List</a>
+<?php } ?>

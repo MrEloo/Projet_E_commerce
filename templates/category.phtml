@@ -1,0 +1,6 @@
+<?php foreach ($data['category'] as $key => $category) { ?>
+    <h1><?= $category->getName() ?></h1>
+    <h2><?= $category->getDescription() ?></h2>
+    <img src="<?= $category->getImageUrl() ?>" alt="<?= $category->getImageAlt() ?>">
+    <a href="index.php">Retour</a>
+<?php } ?>

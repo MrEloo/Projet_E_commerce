@@ -1,0 +1,5 @@
+    <h1><?= $data['product']->getName() ?></h1>
+    <h2><?= $data['product']->getDescription() ?></h2>
+    <img src="<?= $data['product']->getImageUrl() ?>" alt="<?= $data['product']->getImageAlt() ?>">
+    <a href="index.php?route=products">Retour</a>
+    <a href="index.php?route=addOrder&product_id=<?= $value->getId() ?>">Add To my List</a>
